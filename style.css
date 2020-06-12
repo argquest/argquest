@@ -356,3 +356,18 @@ footer{
   width: 100%;
   background: #141414;
 }
+
+.message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	overflow: hidden;
+	margin-top: 200px;
+	width: 60%;
+	margin-left: 20%;
+	opacity: 10%;
+	font-size: xxx-large;
+}
