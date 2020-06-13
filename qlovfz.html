@@ -37,7 +37,7 @@
 
         <!-- <h2 id="welcome-to-github-pages">The History of the Köpenick</h2> -->
 
-<p>Stop right here! Do not follow it! It's dangerous!</p>
+<p>Stop right here! Do not follow it! The truth is too much to bear!</p>
 
 <p>Do you really want to know what's behind the curtain?</p>
 
@@ -45,9 +45,22 @@
 
 <button id="no">No</button>
 
-<div id="result">
-
+<div hidden="true" id="result_yes">
+    <p>All right. But I've warned you! To get next coordinates you need to find 3 numbers:</p>
+    <p>A = In which century the city was founded?</p>
+    <p>B = This is the new church. When the old church that was here before was built?</p>
+    <p>C = How many clocks does the tower of the church have?</p>
+    <p></p><label>A = </label> <input id='A' type='number'>
+    <p></p><label>B = </label> <input id='B' type='number'>
+    <p></p><label>C = </label> <input id='C' type='number'>
+    <p></p><button id='calculate'>Calculate coordinates</button>
 </div>
+
+<div hidden="true" id="result_no">
+  <p>Smart choice!</p>
+</div>
+
+<div id="coordinates"></div>
 
       </section>
       <footer>
@@ -59,19 +72,29 @@
 <script type="text/javascript">
 
 $( "#yes" ).click(function() {
-  $("#result").html("\
-      <p>Ok. But I've warned you! To get next coordinates you need to find 3 numbers:</p>\
-      <p>A = In which century the city was founded?</p>\
-      <p>B = This is the new church. When the old church that was here before was built?</p>\
-      <p>C = How many clocks does the tower of the church have?</p>\
-      <p>Coordinates: N 52° 27,(A+B) E 013° 23,(C+B)</p>\
-    ")
+  $("#result_no").hide();
+  $("#result_yes").show();
 });
 
+// <p>Coordinates: N 52° 27,(A+B) E 013° 23,(C+B)</p>\
 
 $( "#no" ).click(function() {
-  $("#result").html("<p>Smart choice!</p>")
+  $("#result_yes").hide();
+  $("#result_no").show();
 });
+
+$( "#calculate" ).click(function() {
+  var A = parseInt($("#A").val());
+  var B = parseInt($("#B").val());
+  var C = parseInt($("#C").val());
+
+  var lat = (52322343 + B * 100)/1000000;
+  var long = (13569687 + A * 10 + C * 1000)/1000000;
+  $("#coordinates").html("Here we go: <a href='https://maps.google.com?q=" + lat + "," + long + "'>" + lat + "° N, " + long + "° E</a><p>Keep in mind that the coordinates are not verified, it's just calculate based on your input.</p>");
+});
+
+
+// 
 
 </script>
 
