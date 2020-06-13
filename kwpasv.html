@@ -129,8 +129,8 @@ $( "img" ).click(function() {
   $("#result").html("<p style='color: yellow;'>Trying out selected key...</p>");
   if (this.id == "target") {
     setTimeout(() => {  
-      $("#result").html("<p style='color: green;'>Solved! </p>\
-        <p>Coordinates: N 52° 27,xxx E 013° 23,xxx</p>");
+      $("#result").html("<p style='color: greenyellow;'>You have chosen wisely! </p>\
+        <p>Coordinates: <a href='https://maps.google.com?q=52.447990, 13.580485'>52.447990° N, 13.580485° E</a></p>");
     }, 5000);
   }
   else {
