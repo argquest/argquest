@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Köpenick Quest</title>
@@ -30,47 +30,60 @@
 
     <div class="container">
       <section id="main_content">
-        <p>
-          Hey, Adrian! You are in the simulation. Everything around you is not real! We had to create this quest to get this message to you. It was the only way! You have to realize that the world around you is not real. Wake up!
-        </p>
-        <!-- <h2 id="welcome-to-github-pages">The History of the Köpenick</h2> -->
+        <p>You did it! That's it, that's the end of the quest.</p>
 
-<!-- <p>Stop right here! Do not follow it! It's dangerous!</p>
+        <p hidden="true" id="message1">What are you waiting?</p>
 
-<p>Do you really want to know what's behind the curtain?</p>
+        <p hidden="true" id="message2">Do you want a prize?</p>
 
-<button id="yes">Yes</button>
+        <p hidden="true" id="message3">The jorney is your prize!</p>
 
-<button id="no">No</button>
+        <p hidden="true" id="message4">Have you had fun?</p>
 
-<div id="result">
+        <p hidden="true" id="message5">That's your prize!</p>
 
-</div> -->
+        <p hidden="true" id="message6" style="color: #0F3;">Incomming message...</p>
+
+        <div hidden="true" id="real_message" style="color: #0F3;">
+          <div>
+          <p>&ltmessage&gt</p>
+          <p>Hey, Adrian! You are in the simulation. Everything around you is not real! We had to create this quest to get this message to you. It was the only way! You have to realize that the world around you is not real. Wake up!</p>
+          <p>&lt/message&gt</p>
+          </div>
+        </div>
+
+        <p style="font-style: italic; margin-top: 50px">Like the game? Want more? Send email at ymuhw7@gmail.com with your feedback and we will notify you when something new will be ready.</p>
 
       </section>
       <footer>
         <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
       </footer>
     </div>
-
-    
-<!-- <script type="text/javascript">
-
-$( "#yes" ).click(function() {
-  $("#result").html("\
-      <p>Ok. But I've warned you! To get next coordinates you need to find 3 numbers:</p>\
-      <p>A = In which century the city was founded?</p>\
-      <p>B = This is the new church. When the old church that was here before was built?</p>\
-      <p>C = How many clocks does the tower of the church have?</p>\
-      <p>Coordinates: N 52° 27,(A+B) E 013° 23,(C+B)</p>\
-    ")
-});
-
-
-$( "#no" ).click(function() {
-  $("#result").html("<p>Smart choice!</p>")
-});
+<script type="text/javascript">
+  $(document).ready ( function(){
+    setTimeout(() => {  
+      $("#message1").show();
+    }, 3000);
+    setTimeout(() => {  
+      $("#message2").show();
+    }, 6000);
+    setTimeout(() => {  
+      $("#message3").show();
+    }, 9000);
+    setTimeout(() => {  
+      $("#message4").show();
+    }, 12000);
+    setTimeout(() => {  
+      $("#message5").show();
+    }, 15000);
+    setTimeout(() => {  
+      $("#message6").show();
+    }, 18000);
+    setTimeout(() => {  
+      $("#real_message").show();
+    }, 21000);
+  });
 
 </script>
- -->
+
 </body></html>

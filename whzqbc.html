@@ -30,15 +30,42 @@
 
     <div class="container">
       <section id="main_content">
-        <!-- <h2 id="welcome-to-github-pages">The History of the Köpenick</h2> -->
+        <p>You did it! That's it, that's the end of the quest.</p>
 
-      <p>This is the alternative reality game that takes place in the Köpenick. The game is linked to different tourist attractions. Multiple locations are connected through various puzzles. To get a puzzle you have to scan the QR-code that you find in the previous location.</p>
+        <p hidden="true" id="message1">What are you waiting?</p>
 
-      <p>The game is still in development. This page will be updated once game is finished and link to the first puzzle will be posted here.</p>
+        <p hidden="true" id="message2">Do you want a prize?</p>
 
-      <p>For questions and suggestions contact me by email: ymuhw7@gmail.com</p>
+        <p hidden="true" id="message3">The jorney is your prize!</p>
+
+        <p hidden="true" id="message4">Have you had fun?</p>
+
+        <p hidden="true" id="message5">That's your prize!</p>
 
       </section>
+      <footer>
+        <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
+      </footer>
     </div>
+<script type="text/javascript">
+  $(document).ready ( function(){
+    setTimeout(() => {  
+      $("#message1").show();
+    }, 3000);
+    setTimeout(() => {  
+      $("#message2").show();
+    }, 6000);
+    setTimeout(() => {  
+      $("#message3").show();
+    }, 9000);
+    setTimeout(() => {  
+      $("#message4").show();
+    }, 12000);
+    setTimeout(() => {  
+      $("#message5").show();
+    }, 15000);
+  });
+
+</script>
 
 </body></html>

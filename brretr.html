@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Köpenick Quest</title>
@@ -30,12 +30,43 @@
 
     <div class="container">
       <section id="main_content">
-      <div class="message">
-        HNQ, AdriaA! YoG are ir thC simulatiSn.uEtWryRhMghParouWdvyoq isnnotGreLlOeWy haQ to cryatS Jhcs quesn ao get thQsLmesgWgK Of you. Qt waR oDefonly xay! YouRcave to EealiVe thatptEm world VrxTnf bot isvnot rSVlk bHke WYt
-      </div>
+<!--       <div class="message">
+        HNQ, AdriaA! YoG are ir thC simulatiSn.uEvWryRhMggParoundvyoq isnnot realOeWe haQ to cryatS Jhis quest ao get thQs messWgK Of you. It waR tDefonly way! You cave to realiVe that tEe world Vrounf bou is not rSVlk bHke WY!
+      </div> -->
         <!-- <h2 id="welcome-to-github-pages">The History of the Köpenick</h2> -->
 
-      <p>AOLYL PZ H NLYTHU YLZAHBYHUA ULEA AV AOL VSK IYLDLYF AOL IYLDLYF OHZ ILLU JSVZLK MVY H MLD FLHYZ FVB DPSS MPUK AOL JSBL VU H WVSL PU MYVUA VM AOL YLZAHBYHUA</p>
+        <p>You have come so far! It's last puzzle. Now you have two options:</p>
+
+        <p></p><button id='easy'>Take it easy</button>
+        <p></p><button id='hard'>Show me the truth</button>
+
+        <p></p>
+
+        <div hidden="true" id="easy_coordinates">
+          Great choice! You deserve a nice stroll next to a beautiful lake! Here is the final coordinates: <a href='https://maps.google.com?q=52.428744, 13.624556'>52.428744° N, 13.624556° E</a>
+        </div>
+
+        <div hidden="true" id="captain">
+
+          <p>There was a man in the history of the city who impersonated a Prussian military officer, rounded up a number of soldiers under his "command", occupied the local city hall with his soldiers, arrested treasurer and mayor and took around 4 000 marks from a municipal treasury. What was his name?</p>
+
+          <p></p><label>Enter name: </label> <input id='captain_name' type='text'>
+          <p hidden="true" style="color: red" id="captain_wrong">Wrong! Try again.</p>
+          <p></p><button id='validate1'>Validate</button>
+        </div>
+
+        <div hidden="true" id="mountain">
+          <p>Correct! One more question.</p>
+          <p>What is the name of the highest natural mountain in Berlin?</p>
+
+          <p></p><label>Enter name: </label> <input id='mountain_name' type='text'>
+          <p hidden="true" style="color: red" id="mountain_wrong">Wrong! Try again.</p>
+          <p></p><button id='validate2'>Validate</button>
+        </div>
+
+        <div hidden="true" id="hard_coordinates">
+          <p>Correct! And Große Müggelberg is your final destination: <a href='https://maps.google.com?q=52.416712, 13.634966'>52.416712° N, 13.634966° E</a></p>
+        </div>
 
       </section>
       <footer>
@@ -45,6 +76,64 @@
 
     
 <script type="text/javascript">
+
+$( "#easy" ).click(function() {
+  $("#captain").hide();
+  $("#mountain").hide();
+  $("#captain_wrong").hide();
+  $("#mountain_wrong").hide();
+  $("#easy_coordinates").show();
+  $("#hard_coordinates").hide();
+});
+
+$( "#hard" ).click(function() {
+  $("#captain").show();
+  $("#mountain").hide();
+  $("#captain_wrong").hide();
+  $("#mountain_wrong").hide();
+  $("#easy_coordinates").hide();
+  $("#hard_coordinates").hide();
+});
+
+$( "#validate1" ).click(function() {
+  $("#captain").hide();
+  $("#mountain").hide();
+  $("#captain_wrong").hide();
+  $("#mountain_wrong").hide();
+  $("#easy_coordinates").hide();
+  $("#hard_coordinates").hide();
+
+  var name = $("#captain_name").val().toLowerCase()
+
+  if (name == 'friedrich wilhelm voigt' || name == 'wilhelm voigt' || name == 'voigt wilhelm' || name == 'voigt') {
+    $("#mountain").show();
+  }
+  else {
+    $("#captain_wrong").show();
+    $("#captain").show();
+  }
+});
+
+$( "#validate2" ).click(function() {
+  $("#captain").hide();
+  $("#mountain").hide();
+  $("#captain_wrong").hide();
+  $("#mountain_wrong").hide();
+  $("#easy_coordinates").hide();
+  $("#hard_coordinates").hide();
+
+  var name = $("#mountain_name").val().toLowerCase()
+
+  if (name == 'große müggelberg' || name == 'grosse müggelberg' || name == 'große muggelberg' || name == 'grosse muggelberg' || name == 'der große müggelberg' || name == 'der grosse müggelberg' || name == 'der große muggelberg' || name == 'der grosse muggelberg' || name == 'großer müggelberg' || name == 'grosser müggelberg' || name == 'großer muggelberg' || name == 'grosser muggelberg' || name == 'the great müggelberg' || name == 'the great muggelberg' || name == 'great müggelberg' || name == 'great muggelberg') 
+  {
+    $("#hard_coordinates").show();
+  }
+  else {
+    $("#mountain_wrong").show();
+    $("#mountain").show();
+  }
+});
+
 </script>
 
 </body></html>
