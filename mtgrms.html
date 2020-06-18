@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Köpenick Quest</title>
@@ -38,10 +38,46 @@
 <img src="images/postkarte1.jpg"/>
 <img src="images/postkarte2.jpg"/>
 
+<div id="hints">
+  <div class="hint_header"><p>Hint #1 <button class="show_hint" value="1">Show</button></p></div>
+
+  <div hidden="true" id="hint_1">
+    The message is encrypted using morse code.
+
+    <div class="hint_header"><p>Hint #2 <button class="show_hint" value="2">Show</button></p></div>
+
+    <div hidden="true" id="hint_2">
+      Look inside Spreetunel.
+
+      <div class="hint_header"><p>Hint #3 <button class="show_hint" value="3">Show</button></p></div>
+      <div hidden="true" id="hint_3">
+        The icon at the bottom of the postcard matches the mosaic inside the tunnel.
+
+        <div class="hint_header"><p>Hint #4 <button class="show_hint" value="4">Show</button></p></div>
+        <div hidden="true" id="hint_4">
+          Look above the mosaic that is in the middle of the tunnel.
+
+          <div class="hint_header"><p>Hint #5 (next puzzle) <button class="show_hint" value="5">Show</button></p></div>
+          <div hidden="true" id="hint_5">
+            The next puzzle: <a href="brretr">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </section>
       <footer>
         <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
       </footer>
     </div>
+
+<script type="text/javascript">
+$( ".show_hint" ).click(function() {
+  var hint_id = $(this).attr("value");
+  $("#hint_"+hint_id).show();
+});
+</script>
 
 </body></html>

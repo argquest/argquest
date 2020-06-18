@@ -372,3 +372,21 @@ footer{
 	opacity: 10%;
 	font-size: xxx-large;
 }
+
+#hints {
+	margin-top: 100px;
+}
+
+.hint_header {
+	width: 300px;
+	font-weight: bold;
+	font-size: large;
+}
+
+.show_hint {
+	float: right;
+}
+
+.show_hint_easy {
+	float: right;
+}

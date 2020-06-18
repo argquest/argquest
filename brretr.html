@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Köpenick Quest</title>
@@ -42,9 +42,30 @@
 
         <p></p>
 
+        <div id='easy_part' hidden="true" >
+
         <div hidden="true" id="easy_coordinates">
           Great choice! You deserve a nice stroll next to a beautiful lake! Here is the final coordinates: <a href='https://maps.google.com?q=52.428744, 13.624556'>52.428744° N, 13.624556° E</a>
         </div>
+
+<div id="hints">
+  <div class="hint_header"><p>Hint #1 <button class="show_hint_easy" value="1">Show</button></p></div>
+
+  <div hidden="true" id="hint_easy_1">
+    <p>On the back of the sign.</p>
+    <img width="400px" src="images/photo_2020-06-19_00-44-02.jpg"/>
+
+    <div class="hint_header"><p>Hint #2 (final) <button class="show_hint_easy" value="2">Show</button></p></div>
+
+    <div hidden="true" id="hint_easy_2">
+      The final: <a href="whzqbc">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div id='hard_part' hidden="true" >
 
         <div hidden="true" id="captain">
 
@@ -68,6 +89,36 @@
           <p>Correct! And Große Müggelberg is your final destination: <a href='https://maps.google.com?q=52.416712, 13.634966'>52.416712° N, 13.634966° E</a></p>
         </div>
 
+<div id="hints">
+  <div class="hint_header"><p>Hint #1 <button class="show_hint" value="1">Show</button></p></div>
+
+  <div hidden="true" id="hint_1">
+    The man known as The Captain of Köpenick.
+
+    <div class="hint_header"><p>Hint #2 <button class="show_hint" value="2">Show</button></p></div>
+
+    <div hidden="true" id="hint_2">
+      The name of the man is Wilhelm Voigt.
+
+      <div class="hint_header"><p>Hint #3 <button class="show_hint" value="3">Show</button></p></div>
+      <div hidden="true" id="hint_3">
+        The highest natural point in the capital city of Berlin is the Große Müggelberg.
+
+        <div class="hint_header"><p>Hint #4 <button class="show_hint" value="4">Show</button></p></div>
+        <div hidden="true" id="hint_4">
+          Next coordinates:  <a href='https://maps.google.com?q=52.416712, 13.634966'>52.416712° N, 13.634966° E</a>
+          <div class="hint_header"><p>Hint #5 (final) <button class="show_hint" value="5">Show</button></p></div>
+          <div hidden="true" id="hint_5">
+            The final: <a href="fnuwkl">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
       </section>
       <footer>
         <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
@@ -78,6 +129,8 @@
 <script type="text/javascript">
 
 $( "#easy" ).click(function() {
+  $("#easy_part").show();
+  $("#hard_part").hide();
   $("#captain").hide();
   $("#mountain").hide();
   $("#captain_wrong").hide();
@@ -87,6 +140,8 @@ $( "#easy" ).click(function() {
 });
 
 $( "#hard" ).click(function() {
+  $("#easy_part").hide();
+  $("#hard_part").show();
   $("#captain").show();
   $("#mountain").hide();
   $("#captain_wrong").hide();
@@ -124,7 +179,7 @@ $( "#validate2" ).click(function() {
 
   var name = $("#mountain_name").val().toLowerCase()
 
-  if (name == 'große müggelberg' || name == 'grosse müggelberg' || name == 'große muggelberg' || name == 'grosse muggelberg' || name == 'der große müggelberg' || name == 'der grosse müggelberg' || name == 'der große muggelberg' || name == 'der grosse muggelberg' || name == 'großer müggelberg' || name == 'grosser müggelberg' || name == 'großer muggelberg' || name == 'grosser muggelberg' || name == 'the great müggelberg' || name == 'the great muggelberg' || name == 'great müggelberg' || name == 'great muggelberg') 
+  if (name == 'große müggelberg' || name == 'grosse müggelberg' || name == 'große muggelberg' || name == 'grosse muggelberg' || name == 'der große müggelberg' || name == 'der grosse müggelberg' || name == 'der große muggelberg' || name == 'der grosse muggelberg' || name == 'großer müggelberg' || name == 'grosser müggelberg' || name == 'großer muggelberg' || name == 'grosser muggelberg' || name == 'the great müggelberg' || name == 'the great muggelberg' || name == 'great müggelberg' || name == 'great muggelberg' || name == 'the große müggelberg' || name == 'the grosse müggelberg' || name == 'the große muggelberg' || name == 'the grosse muggelberg') 
   {
     $("#hard_coordinates").show();
   }
@@ -132,6 +187,16 @@ $( "#validate2" ).click(function() {
     $("#mountain_wrong").show();
     $("#mountain").show();
   }
+});
+
+$( ".show_hint" ).click(function() {
+  var hint_id = $(this).attr("value");
+  $("#hint_"+hint_id).show();
+});
+
+$( ".show_hint_easy" ).click(function() {
+  var hint_id = $(this).attr("value");
+  $("#hint_easy_"+hint_id).show();
 });
 
 </script>
