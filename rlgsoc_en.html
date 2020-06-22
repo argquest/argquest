@@ -32,23 +32,23 @@
 
     <div class="container">
       <section id="main_content">
-        <h2 id="welcome-to-github-pages">Willkommen in der Köpenick Quest</h2>
+        <h2 id="welcome-to-github-pages">Welcome to The Köpenick Quest</h2>
 
 
-<p style="font-style: italic;">Das ist ein ortsbezogenes Spiel. Das Spiel besteht aus 7 Rätseln. Die Rätsel sind mit Orten in Köpenick verbunden. Jedes Rätsel gibt Ihnen eine Wegbeschreibung zum nächsten Rätsel. Um ein Rätsel zu erhalten, müssen Sie einen irgendwo in Köpenick platzierten QR-Code einscannen. Man muss also vor Ort sein, um dieses Spiel zu spielen. Die Koordinaten des ersten QR-Codes finden Sie auf dieser Seite.</p>
+<p style="font-style: italic;">This is a location-based game. The game consists of 7 puzzles. The puzzles are linked to locations in Köpenick. Each puzzle gives you directions to the next one. To get a puzzle you have to scan a QR-code placed somewhere in Köpenick. So you have to be there to play this game. You will find coordinates to the first QR-code on this page.</p>
 
-<p style="font-style: italic;">Es ist also empfehlenswert, mit dem Fahrrad zu fahren.</p>
+<p style="font-style: italic;">The quest requires you to travel 9-12 km. So it's preferable to cycle.</p>
 
-<p style="font-style: italic; margin-bottom: 50px;">Sind Sie bereit, das Spiel zu spielen?</p>
+<p style="font-style: italic; margin-bottom: 50px;">Ready to play the game?</p>
 
 
-<p>Überall in der Stadt Köpenick tauchen seltsame QR-Codes auf. Der Bürgermeister möchte, dass Sie herausfinden, wohin sie führen.</p>
+<p>Strange QR-codes appear all over the city of Köpenick. The mayor wants you to find out where they are leading.</p>
 
-<p>Wollen Sie die Quest übernehmen?</p>
+<p>Do you want to take the quest?</p>
 
-<button id="yes">Ja</button>
+<button id="yes">Yes</button>
 
-<button id="no">Nein</button>
+<button id="no">No</button>
 
 <div id="result">
 
@@ -63,12 +63,12 @@
 <script type="text/javascript">
 
 $( "#yes" ).click(function() {
-  $("#result").html("<p>Das ist die richtige Einstellung. Der erste QR-Code wurde in diesen Koordinaten gefunden: <a href='https://goo.gl/maps/FZPTEpYgfH1spjrT7'>52.446473° N, 13.575151° E</a>. Gehen Sie und untersuchen Sie es!</p>")
+  $("#result").html("<p>That's the spirit. The first QR-code was found in these coordinates: <a href='https://goo.gl/maps/FZPTEpYgfH1spjrT7'>52.446473° N, 13.575151° E</a>. Go and investigate!</p>")
 });
 
 
 $( "#no" ).click(function() {
-  $("#result").html("<p>Der Bürgermeister ist enttäuscht von Ihnen!</p>")
+  $("#result").html("<p>The mayor is disappointed with you!</p>")
 });
 
 </script>
