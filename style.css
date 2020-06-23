@@ -384,7 +384,7 @@ footer{
 }
 
 .show_hint {
-	float: right;
+	/*float: right;*/
 }
 
 .show_hint_easy {
