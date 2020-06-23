@@ -33,52 +33,58 @@
     <div class="container">
       <section id="main_content">
 
-<p>Halten Sie hier an! Folgen Sie ihm nicht! Die Wahrheit ist zu viel, um sie zu ertragen!</p>
+<!--       <div class="message">
+        VNQi AdrmaA!VYoG areGir thCeGiXiAVtmSnIuEtWrPRhMghPNroSWCvyVq tsnlohGpeLlOeWy oaQ towcqyktS JAcslIuesn ap gxByYaQzLmGsgWgKvOfWRTtwiQb MaR oDefoflaYxay! YouRcavp toHEQalvVm todZptEmBworGQwVrxTnf bot isvmwt HSVPksbHke WYt
+      </div> -->
 
-<p>Wollen Sie wirklich wissen, was sich hinter dem Vorhang verbirgt?</p>
+        <!-- <h2 id="welcome-to-github-pages">The History of the Köpenick</h2> -->
 
-<button id="yes">Ja</button>
+<p>Stop right here! Do not follow it! The truth is too much to bear!</p>
 
-<button id="no">Nein</button>
+<p>Do you really want to know what's behind the curtain?</p>
+
+<button id="yes">Yes</button>
+
+<button id="no">No</button>
 
 <div hidden="true" id="result_yes">
-    <p>Also gut. Aber ich habe Sie gewarnt! Um die nächsten Koordinaten zu erhalten, müssen Sie 3 Zahlen finden:</p>
-    <p>A = In welchem Jahrhundert wurde die Stadt gegründet?</p>
-    <p>B = Das ist die neue Kirche. Wann wurde die alte Kirche, die vorher hier war, gebaut?</p>
-    <p>C = Wie viele Uhren hat der Kirchturm?</p>
+    <p>All right. But I've warned you! To get next coordinates you need to find 3 numbers:</p>
+    <p>A = In which century the city was founded?</p>
+    <p>B = This is the new church. When the old church that was here before was built?</p>
+    <p>C = How many clocks does the tower of the church have?</p>
     <p></p><label>A = </label> <input id='A' type='number'>
     <p></p><label>B = </label> <input id='B' type='number'>
     <p></p><label>C = </label> <input id='C' type='number'>
-    <p></p><button id='calculate'>Koordinaten berechnen</button>
+    <p></p><button id='calculate'>Calculate coordinates</button>
 </div>
 
 <div hidden="true" id="result_no">
-  <p>Gute Wahl!</p>
+  <p>Smart choice!</p>
 </div>
 
 <div id="coordinates"></div>
 
 <div id="hints">
-  <div class="hint_header"><p>Hinweis #1 <button class="show_hint" value="1">Zeigen</button></p></div>
+  <div class="hint_header"><p>Hint #1 <button class="show_hint" value="1">Show</button></p></div>
 
   <div hidden="true" id="hint_1">
-    Die Stadt wurde im 12. Jahrhundert gegründet.
+    The city was founded in the 12th century.
 
-    <div class="hint_header"><p>Hinweis #2 <button class="show_hint" value="2">Zeigen</button></p></div>
+    <div class="hint_header"><p>Hint #2 <button class="show_hint" value="2">Show</button></p></div>
 
     <div hidden="true" id="hint_2">
-      Die alte Kirche stammt aus dem Jahr 1239.
+      The old church was in 1239.
 
-      <div class="hint_header"><p>Hinweis #3 <button class="show_hint" value="3">Zeigen</button></p></div>
+      <div class="hint_header"><p>Hint #3 <button class="show_hint" value="3">Show</button></p></div>
       <div hidden="true" id="hint_3">
-        Auf dem Kirchturm gibt es 4 Uhren.
+        There are 4 clocks on the church tower.
 
-        <div class="hint_header"><p>Hinweis #4 <button class="show_hint" value="4">Zeigen</button></p></div>
+        <div class="hint_header"><p>Hint #4 <button class="show_hint" value="4">Show</button></p></div>
         <div hidden="true" id="hint_4">
-          Nächste Koordinaten:  <a href='https://maps.google.com?q=52.446243, 13.573807'>52.446243° N, 13.573807° E</a>
-          <div class="hint_header"><p>Hinweis #5 (nächstes Rätsel) <button class="show_hint" value="5">Zeigen</button></p></div>
+          Next coordinates:  <a href='https://maps.google.com?q=52.446243, 13.573807'>52.446243° N, 13.573807° E</a>
+          <div class="hint_header"><p>Hint #5 (next puzzle) <button class="show_hint" value="5">Show</button></p></div>
           <div hidden="true" id="hint_5">
-            Das nächste Rätsel: <a href="schplz">link</a>. Wenn Sie den QR-Code nicht finden können, melden Sie ihn bitte per E-Mail: ymuhw7@gmail.com.
+            The next puzzle: <a href="schplz">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
           </div>
         </div>
       </div>
@@ -88,7 +94,7 @@
 
       </section>
       <footer>
-        <p style="margin-left: 20px">Wenn Sie es gefunden haben und nicht wissen, was es ist, besuchen Sie <a href="about">die Seite über das Spiel</a>.</p>
+        <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about">about the game</a>.</p>
       </footer>
     </div>
 
@@ -114,7 +120,7 @@ $( "#calculate" ).click(function() {
 
   var lat = (52322343 + B * 100)/1000000;
   var long = (13569687 + A * 10 + C * 1000)/1000000;
-  $("#coordinates").html("Los geht's: <a href='https://maps.google.com?q=" + lat + "," + long + "'>" + lat + "° N, " + long + "° E</a><p>Denken Sie daran, dass die Koordinaten nicht verifiziert werden, sondern nur aufgrund Ihrer Eingabe berechnet werden.</p>");
+  $("#coordinates").html("Here we go: <a href='https://maps.google.com?q=" + lat + "," + long + "'>" + lat + "° N, " + long + "° E</a><p>Keep in mind that the coordinates are not verified, it's just calculate based on your input.</p>");
 });
 
 $( ".show_hint" ).click(function() {

@@ -36,36 +36,36 @@
         HNQi AdriaA!VYoG are ir thCeGiXiAatmSn.uEtWrPRhMghParouWdvyVq tsnlohGpeLlOeWy oaQ towcqyktS JhcslIuesn ap gxtythQzLmesgWgKvOf yTu.iQt MaR oDefoflaYxay! YouRcavp to EealiVm toaZptEmBworGQwVrxTnf bot isvmwt HSVPksbHke WYt
       </div> -->
 
-      <p>Finden Sie die Skulptur mit Reihern im Schlosspark Köpenick.</p>
-      <p>Wie nennt sich die Komposition?</p>
+      <p>Find the statue with herons in Schlosspark Köpenick.</p>
+      <p>What is the name of the composition?</p>
 
-      <p></p><label>Name eingeben: </label> <input id='name' type='text'>
-      <p></p><button id='validate'>Validieren</button>
+      <p></p><label>Enter name: </label> <input id='name' type='text'>
+      <p></p><button id='validate'>Validate</button>
 
       <div id="result"></div>
 
 <div id="hints">
-  <div class="hint_header"><p>Hinweis #1 <button class="show_hint" value="1">Zeigen</button></p></div>
+  <div class="hint_header"><p>Hint #1 <button class="show_hint" value="1">Show</button></p></div>
 
   <div hidden="true" id="hint_1">
-    <p>Finden Sie diese Skulptur.</p>
+    <p>Find this statue.</p>
     <img width="400px" src="images/herons_statue.jpg"/>
 
-    <div class="hint_header"><p>Hinweis #2 <button class="show_hint" value="2">Zeigen</button></p></div>
+    <div class="hint_header"><p>Hint #2 <button class="show_hint" value="2">Show</button></p></div>
 
     <div hidden="true" id="hint_2">
-      Die Skulptur auf diesen Koordinaten:  <a href='https://maps.google.com?q=52.442611, 13.573125'>52.442611° N, 13.573125° E</a>
+      The statue at this coordinates:  <a href='https://maps.google.com?q=52.442611, 13.573125'>52.442611° N, 13.573125° E</a>
 
-      <div class="hint_header"><p>Hinweis #3 <button class="show_hint" value="3">Zeigen</button></p></div>
+      <div class="hint_header"><p>Hint #3 <button class="show_hint" value="3">Show</button></p></div>
       <div hidden="true" id="hint_3">
-        Der Name der Komposition: Reiherbaum.
+        The name of the composition: Reiherbaum.
 
-        <div class="hint_header"><p>Hinweis #4 <button class="show_hint" value="4">Zeigen</button></p></div>
+        <div class="hint_header"><p>Hint #4 <button class="show_hint" value="4">Show</button></p></div>
         <div hidden="true" id="hint_4">
-          Nächste Koordinaten:  <a href='https://maps.google.com?q=52.445843, 13.574836'>52.445843° N, 13.574836° E</a>
-          <div class="hint_header"><p>Hinweis #5 (nächstes Rätsel) <button class="show_hint" value="5">Zeigen</button></p></div>
+          Next coordinates:  <a href='https://maps.google.com?q=52.445843, 13.574836'>52.445843° N, 13.574836° E</a>
+          <div class="hint_header"><p>Hint #5 (next puzzle) <button class="show_hint" value="5">Show</button></p></div>
           <div hidden="true" id="hint_5">
-            Das nächste Rätsel: <a href="rygmcd">link</a>. Wenn Sie den QR-Code nicht finden können, melden Sie ihn bitte per E-Mail: ymuhw7@gmail.com.
+            The next puzzle: <a href="rygmcd">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
 
       </section>
       <footer>
-        <p style="margin-left: 20px">Wenn Sie es gefunden haben und nicht wissen, was es ist, besuchen Sie <a href="about">die Seite über das Spiel</a>.</p>
+        <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
       </footer>
     </div>
 
@@ -84,10 +84,10 @@
 
 $( "#validate" ).click(function() {
   if ($("#name").val().toLowerCase() == 'reiherbaum') {
-    $("#result").html("<p>Richtig! Nächster Code an <a href='https://maps.google.com?q=52.445843, 13.574836'>52.445843° N, 13.574836° E</a></p>");
+    $("#result").html("<p>Correct! Next code at <a href='https://maps.google.com?q=52.445843, 13.574836'>52.445843° N, 13.574836° E</a></p>");
   }
   else {
-    $("#result").html("<p>Falsche Antwort!</p>");
+    $("#result").html("<p>Wrong answer!</p>");
   }
 });
 

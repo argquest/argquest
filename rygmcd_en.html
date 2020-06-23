@@ -43,9 +43,9 @@
 
 <div id="keys">
 
-<p>Nur einer dieser Schlüssel wird Köpenick für Sie öffnen.</p>
+<p>Only one of these keys will open Köpenick for you.</p>
 
-<p>Informieren Sie sich auch über die Skulptur in Ihrer Nähe. Wer weiß, was in der Zukunft nützlich sein kann.</p>
+<p>Also learn about the statue near you. Who knows what can be useful in the future.</p>
 
 <img style="width: 250px;" src="images/key/combinations/pin4_pin3.png"/>
 <img style="width: 250px;" src="images/key/combinations/pin6_pin5.png"/>
@@ -107,26 +107,26 @@
 </div>
 
 <div id="hints">
-  <div class="hint_header"><p>Hinweis #1 <button class="show_hint" value="1">Zeigen</button></p></div>
+  <div class="hint_header"><p>Hint #1 <button class="show_hint" value="1">Show</button></p></div>
 
   <div hidden="true" id="hint_1">
-    Suchen Sie nach dem Wappen von Köpenick. Sie können es um Sie herum finden.
+    Search for the coat of arms of Köpenick. You can find it around you.
 
-    <div class="hint_header"><p>Hinweis #2 <button class="show_hint" value="2">Zeigen</button></p></div>
+    <div class="hint_header"><p>Hint #2 <button class="show_hint" value="2">Show</button></p></div>
 
     <div hidden="true" id="hint_2">
-      Das letzte Wappen wurde 2004 eingeführt. Sie müssen ein älteres Wappen finden.
+      Latest coat of arms was introduced in 2004. You need to find older one.
 
-      <div class="hint_header"><p>Hinweis #3 <button class="show_hint" value="3">Zeigen</button></p></div>
+      <div class="hint_header"><p>Hint #3 <button class="show_hint" value="3">Show</button></p></div>
       <div hidden="true" id="hint_3">
         <img width="300px" src="images/photo_2020-06-21_21-16-17.jpg"/>
 
-        <div class="hint_header"><p>Hinweis #4 <button class="show_hint" value="4">Zeigen</button></p></div>
+        <div class="hint_header"><p>Hint #4 <button class="show_hint" value="4">Show</button></p></div>
         <div hidden="true" id="hint_4">
-          Nächste Koordinaten:  <a href='https://maps.google.com?q=52.447990, 13.580485'>52.447990° N, 13.580485° E</a>
-          <div class="hint_header"><p>Hinweis #5 (nächstes Rätsel) <button class="show_hint" value="5">Zeigen</button></p></div>
+          Next coordinates:  <a href='https://maps.google.com?q=52.447990, 13.580485'>52.447990° N, 13.580485° E</a>
+          <div class="hint_header"><p>Hint #5 (next puzzle) <button class="show_hint" value="5">Show</button></p></div>
           <div hidden="true" id="hint_5">
-            Das nächste Rätsel: <a href="larnbd">link</a>. Wenn Sie den QR-Code nicht finden können, melden Sie ihn bitte per E-Mail: ymuhw7@gmail.com.
+            The next puzzle: <a href="larnbd">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@
 
       </section>
       <footer>
-        <p style="margin-left: 20px">Wenn Sie es gefunden haben und nicht wissen, was es ist, besuchen Sie <a href="about">die Seite über das Spiel</a>.</p>
+        <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
       </footer>
     </div>
 
@@ -147,16 +147,16 @@
 
 $( "img" ).click(function() {
   $("#keys").hide();
-  $("#result").html("<p style='color: yellow;'>Ausgewählten Schlüssel ausprobieren...</p>");
+  $("#result").html("<p style='color: yellow;'>Trying out selected key...</p>");
   if (this.id == "target") {
     setTimeout(() => {  
-      $("#result").html("<p style='color: greenyellow;'>Sie haben weise gewählt! </p>\
-        <p>Koordinaten: <a href='https://maps.google.com?q=52.447990, 13.580485'>52.447990° N, 13.580485° E</a></p>");
+      $("#result").html("<p style='color: greenyellow;'>You have chosen wisely! </p>\
+        <p>Coordinates: <a href='https://maps.google.com?q=52.447990, 13.580485'>52.447990° N, 13.580485° E</a></p>");
     }, 5000);
   }
   else {
     setTimeout(() => {  
-      $("#result").html("<p style='color: red;'>Der Schlüssel ist falsch!</p>");
+      $("#result").html("<p style='color: red;'>The key is wrong!</p>");
       $("#keys").show();
     }, 5000);
   }
