@@ -4,7 +4,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.3">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Köpenick Quest</title>
@@ -35,7 +35,7 @@
         <h2 id="welcome-to-github-pages">Welcome to The Köpenick Quest</h2>
 
 
-<p style="font-style: italic;">This is a location-based game. The game consists of 7 puzzles. The puzzles are linked to locations in Köpenick. Each puzzle gives you directions to the next one. To get a puzzle you have to scan a QR-code placed somewhere in Köpenick. So you have to be there to play this game. You will find coordinates to the first QR-code on this page.</p>
+<p style="font-style: italic;">This is a location-based game. The game consists of 7 puzzles. The puzzles are linked to locations in Köpenick. Each puzzle gives you directions to the next one. To get a puzzle you have to scan a QR-code placed somewhere in Köpenick. So you have to be there to play this game. You will find coordinates to the first QR-code on this page. Most of the puzzles doesn't require you to use internet but you can use it freely.</p>
 
 <p style="font-style: italic;">The quest requires you to travel 9-12 km. So it's preferable to cycle.</p>
 
@@ -54,6 +54,14 @@
 
 </div>
 
+<div id="hints">
+  <div class="hint_header"><p>Hint #1 (first puzzle) <button class="show_hint" value="1">Zeigen</button></p></div>
+
+  <div hidden="true" id="hint_1">
+    The next puzzle: <a href="qlovfz_en">link</a>. If you can't find QR-code, please report it by e-mail: ymuhw7@gmail.com.
+  </div>
+</div>
+
       </section>
 <!--       <footer>
         <p style="margin-left: 20px">If you found it and don't know what it is visit page the page <a href="about"> about the game</a>.</p>
@@ -69,6 +77,11 @@ $( "#yes" ).click(function() {
 
 $( "#no" ).click(function() {
   $("#result").html("<p>The mayor is disappointed with you!</p>")
+});
+
+$( ".show_hint" ).click(function() {
+  var hint_id = $(this).attr("value");
+  $("#hint_"+hint_id).show();
 });
 
 </script>
